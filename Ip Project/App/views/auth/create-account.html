@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="../../../../Ip Project/">
+    <style>
+    </style>
+</head>
+<body bgcolor="">
+    <font face="corbel">
+        <!--header bar-->
+        <table height="50px" bgcolor="#E1DAEE" width="100%" cellpadding="10">
+            <tr>
+                <td align="center" width="60px"><a href="App/views/landing-page.html"><img src="Resources/images/left-arrow.png" alt="" width="50px"></a></td>
+                <td colspan="3"><font color="#5D428E" size="5"><b>SIGN UP</b></font></td>
+            </tr>
+        </table>
+        <!--a simple nav bar-->
+        <table width="30%" align="center" bgcolor="#fff">
+            <!--this row contains two cells of navigation buttons-->
+            <tr align="center" height="60px">
+                <td colspan="2" width="50%" bgcolor="#5D428E">
+                    <a href="App/views/auth/log-in.html"><font size="5" color="#E1DAEE"><b>LOGIN</b></font></a>
+                </td>
+                <td colspan="2"><font size="5" ><b>SIGN UP</b></font></td>
+            </tr>
+        </table>
+
+        <!--include the form in a table in order to align it in the center the big box-->
+        <table cellpadding="6" align="center" width="30%" bgcolor="#fff">
+            <form action="App/views/main/home.html">
+                <tr>
+                    <td colspan="2"><font size="5" ><b>Fill the following form</b></font><hr></td>
+                </tr>
+                <tr>
+                    <td rowspan="2" width="30%"><label for="profile-picture"><img src="Resources/images/profile.svg" alt="" width="60px" align="right"></label></td>
+                    <td><label for="profile-picture"><b>Profile Picture:</b></label></td>
+                </tr>
+                <tr><td width="150px"><input type="file" name="profile-picture" id="profile-picture"></td></tr>
+                <tr height="">
+                    <td align="right"><label for="first-name"><b>First Name:</b></label></td>
+                    <td><input type="text" name="first-name" size="" value="" required></td>
+                </tr>
+                <tr height="">
+                    <td align="right"><label for="last-name"><b>Last Name:</b></label></td>
+                    <td><input type="text" name="last-name" size="" value=""></td>
+                </tr>
+                <tr height="">
+                    <td align="right" width="100px"><label for="sex"><b>Sex:</b></label></td>
+                    <td>
+                        <input type="radio" name="sex" id="male" checked>
+                        <label for="male">Male</label>
+                        <input type="radio" name="sex" id="female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr height="">
+                    <td align="right"><label for="e-mail"><b>E-mail:</b></label></td>
+                    <td><input type="email" name="email" size="" value="" required></td>
+                </tr>
+                <tr height="">
+                    <td align="right"><label for="department"><b>Department:</b></label></td>
+                    <td><input type="text" name="department" size="" value=""></td>
+                </tr>
+                <tr height="">
+                    <td align="right"><label for="year"><b>Year:</b></label></td>
+                    <td>
+                        <select name="year" id="year">
+                            <option value="freshman">Freshman</option>
+                            <option value="sophomore">Sophomore</option>
+                            <option value="junior">Junior</option>
+                            <option value="senior">Senior</option>
+                            <option value="GC">GC</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="date-of-birth"><b>Date of Birth:</b></label></td>
+                    <td><input type="date" name="date-of-birth"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="phone"><b>Phone:</b></label></td>
+                    <td><input type="tel" name="phone" pattern="+[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="+251-906-246-318"></td>
+                </tr>
+                <tr>
+                    <td align="right" rowspan="2" valign="top">
+                        <label for="password"><b>Password:</b></label>
+                    </td>
+                    <td>
+                        Create a password of minimum 8 characters<br>
+                        <label for="password">Create Password</label><br>
+                        <input type="password" name="password" maxlength="16" minlength="8" required><br>
+                        <label for="confirm-password">Confirm Pssword</label><br>
+                        <input type="password" name="confirm-password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="policy" id="policy" required>
+                        By checking this box you will agree to the terms of privacy policy.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="image" width="220px" src="Resources/images/create-account.p.png" alt="">
+                    </td>
+                </tr>
+            </form>            
+        </table>
+        <hr>
+        <table align="center" width="60%" bgcolor="#eee">
+            <!--footer message-->
+            <tr align="center" height="50px">
+                <td>
+                    <p>Coming soon on google play...</p>
+                </td>
+            </tr>
+        </table>
+    </font>
+</body>
+</html>

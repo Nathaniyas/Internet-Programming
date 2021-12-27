@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile-settings</title>
+    <base href="../../../../Ip Project/">
+</head>
+<body bgcolor="#222"><font face="corbel">
+    <!--header bar-->
+    <table height="50px" bgcolor="#E1DAEE" width="100%" cellpadding="10">
+        <tr>
+            <td align="center" width="60px"><a href="App/views/main/home.html"><img src="Resources/images/left-arrow.png" alt="" width="50px"></a></td>
+            <td colspan="3"><font color="#5D428E" size="5"><b>SETTINGS</b></font></td>
+        </tr>
+    </table>
+    <!--profile banner-->
+    <table width="100%" align="center" bgcolor="#5D428E" cellpadding="5">
+        <tr height="10px">
+            <td width="10px" rowspan="4"></td>
+            <td colspan="5"></td>
+            <td width="10px" rowspan="4"></td>
+        </tr>
+        <tr>
+            <td width="20%" bgcolor="#E1DAEE" rowspan="1" align="center" valign="center">
+                <label for="profile-picture"><img src="Resources/images/profile.svg" width="90%"></label>
+            </td>
+            <td align="left" valign="top">
+                <font face="corbel" size="6" align="left" color="white"><b>Abel Girma</b></font><br>
+                <font face="verdana" size="2" color="#E1DAEE">ETS0075/12<br>Software Engineering<br>Junior Class</font>
+            </td>
+            <td rowspan="" valign="top" align="right">
+                <a href="App/views/landing-page.html "><img src="Resources/images/logout.png" alt=""></a>
+            </td>
+        </tr>
+        <tr height="10px"></tr>
+    </table>
+    <!--main content-->
+    <table width="100%" align="center" cellpadding="6" bgcolor="white">
+        <!--this table has four panes in one row-->
+        <tr valign="top">
+            <!--pane 1 appearance settings-->
+            <td>
+                <table cellpadding="6">
+                    <tr>
+                        <td colspan="2"><font size="5" ><b>Appearance</b></font><hr></td>
+                    </tr>
+                    <tr height="">
+                        <td align="right" width="100px"><label for=""><b>Color Theme:</b></label></td>
+                        <td>
+                            <input type="radio" name="theme" id="light" checked>
+                            <label for="light">Light</label>
+                            <input type="radio" name="theme" id="dark">
+                            <label for="dark">Dark</label>
+                        </td>
+                    </tr>
+                    <tr height="">
+                        <td align="right"><label for=""><b>Font Size:</b></label></td>
+                        <td>
+                            <input type="radio" name="font-size" id="small">
+                            <label for="small">Small</label>
+                            <input type="radio" name="font-size" id="medium" checked>
+                            <label for="medium">Medium</label>
+                            <input type="radio" name="font-size" id="big">
+                            <label for="big">Big</label>
+                        </td>
+                </table>
+            </td>
+            <!--pane 2 profile settings-->
+            <td>
+                <table cellpadding="6">
+                    <form action="#">
+                        <tr>
+                            <td colspan="2"><font size="5" ><b>Profile</b></font><hr></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><label for="profile-picture"><img src="Resources/images/profile.svg" alt="" width="60px" align="right"></label></td>
+                            <td><label for="profile-picture"><b>Profile Picture:</b></label></td>
+                        </tr>
+                        <tr><td width="150px"><input type="file" name="profile-picture" id="profile-picture"></td></tr>
+                        <tr height="">
+                            <td align="right"><label for="first-name"><b>First Name:</b></label></td>
+                            <td><input type="text" name="first-name" size="" value="Abel"></td>
+                        </tr>
+                        <tr height="">
+                            <td align="right"><label for="last-name"><b>Last Name:</b></label></td>
+                            <td><input type="text" name="last-name" size="" value="Girma"></td>
+                        </tr>
+                        <tr height="">
+                            <td align="right" width="100px"><label for="sex"><b>Sex:</b></label></td>
+                            <td>
+                                <input type="radio" name="sex" id="male" checked>
+                                <label for="male">Male</label>
+                                <input type="radio" name="sex" id="female">
+                                <label for="female">Female</label>
+                            </td>
+                        </tr>
+                        <tr height="">
+                            <td align="right"><label for="department"><b>Department:</b></label></td>
+                            <td><input type="text" name="department" size="" value="Software Engineering"></td>
+                        </tr>
+                        <tr height="">
+                            <td align="right"><label for="year"><b>Year:</b></label></td>
+                            <td>
+                                <select name="year" id="year">
+                                    <option value="freshman">Freshman</option>
+                                    <option value="sophomore">Sophomore</option>
+                                    <option value="junior">Junior</option>
+                                    <option value="senior">Senior</option>
+                                    <option value="GC">GC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label for="date-of-birth"><b>Date of Birth:</b></label></td>
+                            <td><input type="date" name="date-of-birth"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label for="phone"><b>Phone:</b></label></td>
+                            <td><input type="tel" name="phone" pattern="+[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="+251-906-246-318"></td>
+                        </tr>
+                        <tr>
+                            <td align="right" rowspan="2" valign="top">
+                                <label for="old-password"><b>Password:</b></label>
+                            </td>
+                            <td>
+                                <label for="old-password">Old Password</label><br>
+                                <input type="password" name="old-password"><br>
+                                <label for="new-password">New Password</label><br>
+                                <input type="password" name="new-password"><br>
+                                <label for="confirm-password">Confirm New Pssword</label><br>
+                                <input type="password" name="confirm-password">
+                            </td>
+                        </tr>
+                        <tr><td><button type="submit">Save changes</button></td></tr>
+                    </form>            
+                </table>
+            </td>
+            <!--pane 3 account settings-->
+            <td>
+                <table cellpadding="6">
+                    <form action="#">
+                        <tr>
+                            <td colspan="2"><font size="5" ><b>Account</b></font><hr></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" align="right" valign="top"><label for="delete-account" color="red"><b>Delete Account</b></label></td>
+                            <td line-height="1.25">
+                                <b>What was your reason?</b><br>
+                                <input type="radio" name="delete-account" id="hacked">
+                                <label for="hacked">My account was hacked</label><br>
+                                <input type="radio" name="delete-account" id="hard-to-use">
+                                <label for="hard-to-use">I don't understand how to use this web</label><br>
+                                <input type="radio" name="delete-account" id="not-useful">
+                                <label for="not-useful">I don't find this webe useul</label><br>
+                                <input type="radio" name="delete-account" id="other">
+                                <label for="other">Other? Please Explain:</label><br>
+                                <textarea name="other" cols="30" rows="3"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit">Delete Account</button></td>
+                        </tr>
+                    </form>
+                </table>
+            </td>
+            <!--pane 4 ask question-->
+            <td>
+                <table cellpadding="6">
+                    <form action="">
+                        <tr>
+                            <td colspan="2"><font size="5" ><b>Ask a Question</b></font><hr></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="question">Write your question here</label><br>
+                                <textarea name="question" id="" cols="30" rows="3"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit">Submit Question</button></td>
+                        </tr>
+                    </form>            
+                </table>
+            </td>
+        </tr>
+    </table>
+</font>
+</body>
+</html>
