@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Group - 7">
+   <base href="../../../../Ip Project Phase-2/">
+   <link rel="stylesheet" href="Resources/css/base.css">
+   <link rel="stylesheet" href="Resources/css/create-group.css">
+   <title>Create a New Group</title>
+</head>
+<body>
+   <div class="main-container">
+      <div class="nav-bar">
+         <img src="" alt="" class="nav-icon">
+         <span></span>
+      </div>
+      <form action="App/views/main/my-group.html">
+         <img src="Resources/images/icons/camera.svg" alt="" class="profile-pic">
+         <input type="file" name="prifilePic" id="profilePic" class="hidden-input">
+         <label for="profilePic" class="pro-pic-label">Set profile picture</label>
+
+         <span class="section-title">basic</span>
+
+         <label for="group-name">Group name</label>
+         <input type="text" name="groupName" id="GroupName" required>
+
+         <label for="descripton">Discription</label>
+         <textarea
+         name="description"
+         id="description"
+         rows="3"
+         placeholder="say something about the group"
+         required></textarea>
+         <span class="section-title">availability</span>
+
+         <div class="radio-box">
+            <input type="radio" name="availability" id="private">
+            <label for="private">Private</label>
+         </div>
+         <div class="radio-box">
+            <input type="radio" name="availability" id="public">
+            <label for="public">Public</label>            
+         </div>
+         <span class="section-title">category</span>
+         <div class="radio-box-wrapper">
+            <div class="radio-box">
+               <input type="radio" name="category" id="academic"><label for="academic">Academic</label><br>
+            </div>
+            <div class="radio-box">
+               <input type="radio" name="category" id="shopping"><label for="shopping">Shopping</label><br>
+            </div>
+            <div class="radio-box">
+               <input type="radio" name="category" id="funAndGame"><label for="funAndGame">Fun and Games</label><br>
+            </div>
+            <div class="radio-box">
+               <input type="radio" name="category" id="artsAndLiterature"><label for="artsAndLiterature">Arts and Literature</label><br>
+            </div>
+            <div class="radio-box">
+               <input type="radio" name="category" id="scieneAndTech"><label for="scieneAndTech">Science and Tech</label><br>
+            </div>
+            <div class="radio-box">
+               <input type="radio" name="category" id="sport"><label for="sport">Sport</label><br>
+            </div>
+            <div class="radio-box">
+               <input type="radio" name="category" id="religious"><label for="religious">Religious</label><br>
+            </div>
+            <div class="radio-box">
+               <input type="radio" name="category" id="foodAndDrink"><label for="foodAndDrink">Food and Drinks</label>
+            </div>
+         </div>
+         <span class="section-title">Admin Contact</span>
+         <label for="admEmail">E-mail</label>
+         <input type="email" name="admEmail" id="admEmail">
+         <label for="admPhone">Phone</label>
+         <input type="tel" name="admPhone" id="admPhone">
+         <input type="submit" value="Finish" class="finish">
+      </form>
+   </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+<desc>Created with Fabric.js 1.7.22</desc>
+<defs>
+</defs>
+<g transform="translate(128 128) scale(0.72 0.72)" style="">
+	<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)" >
+	<path d="M 46.65 49.591 h -3.299 c -3.62 0 -6.565 2.946 -6.565 6.566 v 15.591 c 0 3.62 2.945 6.566 6.565 6.566 h 3.299 c 3.62 0 6.565 -2.946 6.565 -6.566 V 56.156 C 53.215 52.536 50.27 49.591 46.65 49.591 z M 50.248 71.748 c 0 1.985 -1.614 3.599 -3.598 3.599 h -3.299 c -1.984 0 -3.598 -1.614 -3.598 -3.599 V 56.156 c 0 -1.985 1.614 -3.599 3.598 -3.599 h 3.299 c 1.984 0 3.598 1.614 3.598 3.599 V 71.748 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	<path d="M 69.562 26.475 h -6.563 V 14.174 C 62.999 6.358 56.641 0 48.826 0 h -7.652 c -7.816 0 -14.174 6.358 -14.174 14.174 v 12.301 h -6.562 c -4.438 0 -8.048 3.61 -8.048 8.047 v 47.431 c 0 4.437 3.61 8.047 8.048 8.047 h 49.124 c 4.437 0 8.047 -3.61 8.047 -8.047 V 34.522 C 77.61 30.085 73.999 26.475 69.562 26.475 z M 29.968 14.174 c 0 -6.179 5.027 -11.207 11.207 -11.207 h 7.652 c 6.179 0 11.207 5.027 11.207 11.207 v 12.301 H 29.968 V 14.174 z M 74.643 81.953 c 0 2.801 -2.279 5.08 -5.08 5.08 H 20.438 c -2.801 0 -5.081 -2.279 -5.081 -5.08 V 34.522 c 0 -2.801 2.279 -5.08 5.081 -5.08 h 49.124 c 2.801 0 5.08 2.279 5.08 5.08 V 81.953 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+</g>
+</g>
+</svg>

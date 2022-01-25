@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Group - 7">
+   <base href="../../../../Ip Project Phase-2/">
+   <link rel="stylesheet" href="Resources/css/base.css">
+   <link rel="stylesheet" href="Resources/css/mame-tech.css">
+   <title>News Feed</title>
+</head>
+<body>
+   <header class="group-header">
+      <div class="app-icon-container">
+          <img class="app-icon" src="Resources/images/mame-icon.png" alt="">
+          <span class="app-icon-label">mame tech</span>
+      </div>
+
+      <div class="profile-box">
+          <img src="Resources/images/icons/menu.svg" id="menu" class="profile-icon" onclick="showPop('profilePop')">
+      </div>
+  </header>
+   <div class="message-wrapper">     
+      <div class="message-box">
+         <div class="message-header">
+            <div class="sender-info">
+               <small>jan 23 7:23 pm</small>
+            </div>
+         </div>
+
+         <div class="message-body">
+            <p>
+               ለ ዋይፋይ ፓስወርድ ፈላጊዎች በሙሉ!! እንኳን ደስ አላችሁ በቀላሉ ዋይ ፋይ 
+               ፓስወርድ የምናገኝበት አፕ ተገኘ በሁሉም ስልክ ላይ የሚሰራ። 
+            </p>
+            <img src="Resources/images/wifi.jpg" alt="">
+         </div>
+
+         <hr>
+
+         <div class="message-footer">
+            <div class="reaction" onclick="dialogue.style.display='flex'">
+               <img src="Resources/images/icons/comment.svg" alt="">
+               <span>2</span>
+            </div>
+            
+            <div class="reaction">
+               <img src="Resources/images/icons/like.svg" alt="">
+               <span>55</span>
+            </div>
+         </div>
+         
+      </div>
+   </div>
+
+   <!--comment section a dialogue box-->
+   <section class="comment-window" id="dialogue">
+      
+      <div class="nav-bar">
+         <img src="Resources/images/icons/left-arrow.svg" alt="" class="nav-icon"  onclick="dialogue.style.display= 'none'">
+         <span>comment</span>
+      </div>
+
+      <div class="comment-wrapper">
+         
+         <div class="message-box">
+
+            <div class="message-header">
+               <div class="sender-info">
+                  <small>jan 23 7:23 pm</small>
+               </div>
+            </div>
+
+            <div class="message-body">
+               <p>
+                  ለ ዋይፋይ ፓስወርድ ፈላጊዎች በሙሉ!! እንኳን ደስ አላችሁ በቀላሉ 
+                  ዋይ ፋይ ፓስወርድ የምናገኝበት አፕ ተገኘ በሁሉም ስልክ ላይ የሚሰራ።
+               </p>
+               <img src="Resources/images/wifi.jpg" alt="">
+            </div>
+
+         </div>
+
+         <hr>
+
+         <div class="comment-box">
+            <div class="comment-body">
+               <p>
+                  its very interesting app
+               </p>
+            </div>
+
+            <div class="comment-footer">
+               <img src="Resources/images/icons/user.svg" alt="" class="sender-icon">
+               <div class="commenter-info">
+                  <b>Abel Girma</b>
+                  <small>jan 23 7:23 pm</small>
+               </div>
+            </div>
+         </div>
+         
+         <div class="comment-box">
+            <div class="comment-body">
+               <p>
+                  what an app, its better than anything i see.
+               </p>
+               <img src="Resources/images/left-arrow.pngd" alt="">
+            </div>
+
+            <div class="comment-footer">
+               <img src="Resources/images/icons/user.svg" alt="" class="sender-icon">
+               <div class="commenter-info">
+                  <b>Minase Diriba</b>
+                  <small>jan 23 7:23 pm</small>
+               </div>
+            </div>
+             
+         </div>
+      </div>
+
+      <div class="edit-comment-box">
+         <input name="comment" type="text" id="comment"placeholder="write your comments here">
+         <img src="Resources/images/icons/send.png" alt="" class="send">
+      </div>
+   </section>
+
+   <!--settings profile-->
+   <section class="profile-holder" id="profilePop" onclick="closePopWindow()">
+      <iframe src="App/views/setting/mame-tech-profile.html" frameborder="5" id="popFrame" style="border: none;"></iframe>
+   </section>
+<script>
+var openedPop;
+function showPop() {
+   document.getElementById("profilePop").style.display = "flex";
+}
+function closePopWindow() {
+   document.getElementById("profilePop").style.display = "none";
+}
+document.getElementById("popFrame").setAttribute("onclick", "closePopWindow()");
+
+</script>
+
+</body>
+</html>

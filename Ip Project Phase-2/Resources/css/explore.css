@@ -1,0 +1,218 @@
+* {
+   font-family: corbel;
+}
+html {
+   font-size: 16px;
+   overflow: hidden;
+}
+body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 10px;
+   overflow-y: auto;
+   background-color: white;
+}
+.main-wrapper-top {
+   width: 100%; 
+   max-width: 100%;
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   grid-gap: 10px;
+}
+
+.main-wrapper {
+   width: 100%; 
+   max-width: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow-x: visible;
+   gap: 5px;
+}
+.section-label, .category-list-label {
+   width: 100%;
+   max-width: 935px;
+   flex-grow: 0;
+   margin: 10px 0;
+   text-transform: uppercase;
+   font-size: 16px;
+}
+.category-list-label {
+   font-size: 15px;
+}
+.group-category-box {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   padding: 10px 0;
+   background: white;
+}
+.category-icon {
+   width: 50px;
+}
+.category-info{
+   max-width: calc(100% - 60px);
+   flex-basis: 30px;
+   flex-grow: 1;
+   text-align: left;
+   line-height: 1;
+}
+.category-name {
+   width: 100%;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.stat {
+   width: 100%;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.group-preview-box {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   overflow: hidden;
+   padding: 10px 0;
+}
+.group-icon {
+   height: 50px;
+   border-radius: 50%;
+}
+.group-info {
+   width: calc(100% - 120px);
+   flex-grow: 1;
+   display: block;
+   line-height: 1;
+   color: rgb(0, 0, 0);
+}
+.group-info * {
+   display: block;
+   width: 100%;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.group-name {
+   text-transform:capitalize;
+}
+.join-group {
+   width: 50px;
+   padding: 5px 0;
+   border-radius: 50px;
+   background-color:  white;
+   color:#5D428E;
+   text-align: center;
+   font-size: 13px;
+   font-weight: bold;
+   cursor: pointer;
+}
+@media (min-width: 420px) {
+   body {
+      /*background-image: radial-gradient(#e6c772, #e88329);
+      background-size: 100px 100px;
+      background-repeat: repeat;
+      background-attachment: fixed;*/
+      background-color: #eee;
+   }
+   .main-wrapper-top {
+      max-width: 934px;
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .main-wrapper {
+      max-width: 935px;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .group-category-box {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      align-self: stretch;
+      padding: 10px;
+      gap: 10px;
+   }
+   .category-icon {
+      width: 100px;
+      border-radius: 0;
+   }
+   .category-info{
+      max-width: auto;
+      flex-basis: 10px;
+      flex-shrink: 0;
+   }
+   .stat {
+      width: 100%;
+      white-space:normal;
+   }
+   .group-preview-box {
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 5px;
+      padding: 10px;
+      background-image:
+      linear-gradient(#0008, #000b),
+      url("../../Resources/images/default.png");
+      background-size: 100% 100%,auto  100%;
+      background-position: center;
+      border-radius: 10px;
+   }
+   .group-icon {
+      height: 100px;
+      width: 100px;
+      border: solid 3px #ffffff;
+   }
+   .group-info {
+      width: 100%;
+      display: block;
+      color: rgb(236, 235, 235);
+      text-align: center;
+   }
+}
+@media (min-width: 565px) {
+   .main-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+   }
+   .main-wrapper-top {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+@media (min-width: 750px) {
+   .main-wrapper-top {
+      grid-template-columns: repeat(3, 1fr);
+   }
+   .main-wrapper-top {
+      grid-template-columns: repeat(4, 1fr);
+   }
+   .main-wrapper {
+      grid-template-columns: repeat(4, 1fr);
+   }
+}
+@media (min-width: 935px) {
+   .main-wrapper {
+      grid-template-columns: repeat(5, 1fr);
+   }
+   .main-wrapper-top {
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+}
+.action-button {
+   position: fixed; 
+   right: 10px; 
+   bottom: 10px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-color: white;
+   box-shadow: 0 0 10px #333;
+   text-align: center;
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+.main-wrapper:hover ~ .action-button {
+   display: flex;
+}
