@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Group - 7">
+   <base href="../../../../Ip Project Phase-3/">
+   <link rel="stylesheet" href="Resources/css/base.css">
+   <link rel="stylesheet" href="Resources/css/auth.css">
+   <script src="Resources/js/base.js"></script>
+   <title>Sign Up</title>
+</head>
+<body>
+   <div class="main-card">
+      <div class="nav-bar">
+         <span>SIGN UP</span>
+         <a href="App/views/landing-page.html">
+            <img src="Resources/images/svg/close.svg" class="nav-icon">
+         </a>
+      </div>
+
+      <div class="button-box">
+         <button class="switch"><a href="App/views/auth/login.html">LOGIN</a></button>
+         <button class="switch on">SIGN UP</button>
+      </div>
+
+      <form action="App/views/main/index.html" onsubmit="return validateSignUp()" name="signupForm">
+         <div class="profile-photo-container">
+            <img src="Resources/images/svg/user.svg" class="profile-picture" id="profilePic">
+
+            <input 
+            type="file" name="photo" 
+            id="photo" class="hidden-input" 
+            accept="image/*" oninput='photo = this.files[0].name, profilePic.src = "Resources/images/" + this.files[0].name'>
+            <label for="photo" ></label>
+
+         </div>
+
+         <label for="fName">First Name</label>
+         <input type="text" name="fName" id="fName" class="text-input" maxlength="15" required>
+
+         <label for="lName">Last Name</label>
+         <input type="text" name="lName" id="lName" class="text-input" maxlength="15">
+
+         <label for="sex">Sex</label>
+         <select name="sex" id="sex" class="text-input">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+         </select>
+
+         <label for="email">E-mail</label>
+         <input type="email" name="email" id="email" class="text-input" placeholder="example: ets058713feng@aastu.edu.et" required>
+
+         <label for="phone">Phone</label>
+         <input type="tel" name="phone" id="phone" class="text-input">
+
+         <label for="password">Password</label>
+         <input type="password" minlength="8" maxlength="16" name="password" id="password" class="text-input" required>
+
+         <label for="confirm">Confirm Password</label>
+         <input type="password" minlength="8" maxlength="16" name="confirm" id="confirm" class="text-input" required>
+
+         <label for="privacy">
+            <input type="checkbox" name="privacy" id="privacy" required>
+            by checking this box you will agree to the terms of 
+            privacy policy
+         </label>
+         <button type="submit" class="login">SIGN UP</button>  
+      </form>
+   </div>
+<script>
+//localStorage.clear();
+var users = {
+    'ets0466': {
+       fname : "Michael",
+       lname : "Gashaw",
+       sex : 'male',
+       phone : '',
+       email : 'ets046612feng@aastu.edu.et',
+       password : 'michaelGashaw',
+       photo : 'Resources/images/science.jpg',
+       groups : ['refbook', 'programming', 'news'],
+       ownGroups : [],
+    },
+    'ets0480':{
+       fname : "Minase",
+       lname : "Driba",
+       sex : 'male',
+       phone : '',
+       email : 'ets048012feng@aastu.edu.et',
+       password : 'minaseDriba',
+       photo : 'Resources/images/science.jpg',
+       groups : ['programming', 'brand', 'news'],
+       ownGroups : [],
+    },
+    'ets0482':{
+       fname : "Minase",
+       lname : "Fikadu",
+       sex : 'male',
+       phone : '',
+       email : 'etso48212feng@aastu.edu.et',
+       password : 'minaseFikadu',
+       photo : 'Resources/images/science.jpg',
+       groups : ['programming', 'brand', 'news'],
+       ownGroups : [],
+    },
+    'ets0487':{
+       fname : "Mohammed",
+       lname : "Yezid",
+       sex : 'male',
+       phone : '',
+       email : 'ets048712feng@aastu.edu.et',
+       password : 'mohammedYezid',
+       photo : 'Resources/images/science.jpg',
+       groups : ['refbook', 'programming', 'brand','news'],
+       ownGroups : [],
+    },
+    'ets0516':{
+       fname : "Nathan",
+       lname : "Lijalem",
+       sex : 'male',
+       phone : '',
+       email : 'ets051612feng@aastu.edu.et',
+       password : 'nathanLijalem',
+       photo : 'Resources/images/science.jpg',
+       groups : ['refbook', 'programming', 'news'],
+       ownGroups : [],
+    }
+};
+if (!localStorage.getItem("users")){
+    localStorage.setItem("users", JSON.stringify(users));
+}
+else {
+    users =  JSON.parse(localStorage.getItem('users'));
+}
+
+var user, photo = "Resources/images/svg/user.svg";
+
+function validateSignUp() {
+   var fName = document.forms['signupForm']['fName'].value;
+   var sex = document.forms['signupForm']['sex'].value;
+   var email = document.forms['signupForm']['email'].value;
+   var password = document.forms['signupForm']['password'].value;
+   var confirm = document.forms['signupForm']['confirm'].value;
+   var phone = document.forms['signupForm']['phone'].value;
+   var lName = document.forms['signupForm']['lName'].value;
+
+
+   user = users[email.substr(0,7)];
+   if (user) {
+      alert("the email has been taken");
+      return false;
+   }
+   else if ( !(email.length >= 26)) {
+      alert("please insert a valid institutional email\nby this pattern 'ets058912feng@astu.edu.et'");
+      return false;
+   }
+   else if (!(email.slice(13, 26) == "@aastu.edu.et")) {
+      alert("please insert a valid institutional email\nby this pattern 'ets058912feng@astu.edu.et'");
+      return false;
+   }
+   if (confirm == password) {
+      //alert("first check passed");
+      user = new User(fName, sex, email, password, lName, phone, photo);
+      localStorage.setItem("curUser", email.substr(0,7));
+      alert("successfully created an account")
+      users[email.substr(0,7)] = user;
+      localStorage.setItem('users', JSON.stringify(users));
+      return true;
+   }
+   else {
+      alert("Please match the passwords!");
+      return false;
+   }
+}
+</script>
+</body>
+</html>
+
+
+
